@@ -1,0 +1,6 @@
+langchain-google-genai
+streamlit
+langchain-tools
+wikipedia
+pypdf
+streamlit
