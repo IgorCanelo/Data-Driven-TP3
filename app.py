@@ -84,7 +84,9 @@ uploaded_file = st.file_uploader("Selecione um arquivo PDF", type=["pdf"])
 if uploaded_file:
     with st.spinner("Processando o arquivo PDF..."):
         try:
+        
             DATA_FOLDER = "data"
+            os.makedirs(DATA_FOLDER, exist_ok=True)
             file_path = os.path.join(DATA_FOLDER, uploaded_file.name)
             with open(file_path, "wb") as f:
                 f.write(uploaded_file.getbuffer())
